@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài thực hành 8</title>
+  </head>
+  <body>
+    <h2>Hiển thị số lượng Số nguyên tố theo yêu cầu người dừng</h2>
+    <script>
+      let numbers = +prompt("Nhập số lượng số nguyên tố cần hiển thị: ");
+      let count = 0;
+      let N = 2;
+
+      while (count < numbers) {
+        let isPrime = true;
+
+        for (let i = 2; i <= Math.sqrt(N); i++) {
+          if (N % i === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+        if (isPrime) {
+          document.write(N + "<br>");
+          count++;
+        }
+        N++;
+      }
+    </script>
+  </body>
+</html>
